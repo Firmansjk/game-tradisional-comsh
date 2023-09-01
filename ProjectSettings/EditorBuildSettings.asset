@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenuScene.unity
     guid: 450f9442aadf0c442a58b8c3533a38e6
+  - enabled: 1
+    path: Assets/Scenes/LattoLattoScene.unity
+    guid: dd0826f2abdc96542b70e7d0bbfcf72f
   m_configObjects: {}
