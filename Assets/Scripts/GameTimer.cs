@@ -7,7 +7,7 @@ public class GameTimer : MonoBehaviour
 {
 
     [SerializeField] GameObject timeText;
-    [SerializeField] GameObject goalText;
+    [SerializeField] GameObject winnerText;
     public float timeRemaining = 60f;
     public bool timeIsRunning = false;
     public Text timerText;
@@ -33,7 +33,7 @@ public class GameTimer : MonoBehaviour
                 timeRemaining = 0;
                 timeIsRunning = false;
                 timeText.SetActive(false);
-                goalText.SetActive(true);
+                winnerText.SetActive(true);
             }
         }
     }
