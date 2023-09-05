@@ -2317,10 +2317,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Bu'uh Rawe adalah permainan tradisional yang berasal dari Indonesia. Dalam
+  m_Text: Ma'raga adalah permainan tradisional yang berasal dari Indonesia. Dalam
     permainan ini, para pemain melempar dan menangkap bola dari bahan yang dilipat,
     biasanya dari anyaman bambu. Tujuan permainan ini adalah untuk menjaga bola tetap
-    bergerak di udara dan mencegah jatuh ke tanah. Bu'uh Rawe melibatkan keterampilan
+    bergerak di udara dan mencegah jatuh ke tanah. Ma'raga melibatkan keterampilan
     tangan yang presisi dan koordinasi antara pemain, sambil juga mempromosikan interaksi
     sosial dan kebersamaan dalam kelompok.
 --- !u!222 &768217853
@@ -5137,7 +5137,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Bu'uh Rawe
+  m_Text: Ma'raga
 --- !u!222 &1750502361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5156,7 +5156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1752421412}
   m_Layer: 5
-  m_Name: Info Bu'uh Rawe
+  m_Name: Info Ma'raga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6308,7 +6308,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Bu'uh Rawe
+  m_Text: Ma'raga
 --- !u!222 &2060054319
 CanvasRenderer:
   m_ObjectHideFlags: 0
