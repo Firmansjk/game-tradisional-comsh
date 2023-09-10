@@ -5053,7 +5053,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2056032467}
         m_TargetAssemblyTypeName: SceneMoving, Assembly-CSharp
-        m_MethodName: LoadLattoLatto
+        m_MethodName: LoadPreparationScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

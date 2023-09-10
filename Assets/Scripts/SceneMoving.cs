@@ -5,16 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneMoving : MonoBehaviour
 {
-    public void LoadLattoLatto()
+    public void LoadPreparationScene()
     {
-        SceneManager.LoadScene("LattoLattoScene");
-    }
-    public void LoadTakraw()
-    {
-        SceneManager.LoadScene("TakrawScene");
-    }
-    public void LoadBuuhRawe()
-    {
-        SceneManager.LoadScene("BuuhRaweScene");
+        SceneManager.LoadScene("PreparationScene", LoadSceneMode.Single);
     }
 }
