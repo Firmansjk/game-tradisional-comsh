@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class GameTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeIsRunning = true;
+        
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class GameTimer : MonoBehaviour
                 timeIsRunning = false;
                 timeText.SetActive(false);
                 winnerText.SetActive(true);
+                Invoke("ToNextLevel", 5.0f);
             }
         }
     }
@@ -51,5 +53,14 @@ public class GameTimer : MonoBehaviour
         return timeRemaining;
     }
 
+    public void TimeMove()
+    {
+        timeIsRunning = true;
+    }
 
+    public void ToNextLevel()
+    {
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextSceneIndex);
+    }
 }

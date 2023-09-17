@@ -278,6 +278,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 648033149}
+        m_TargetAssemblyTypeName: GameTimer, Assembly-CSharp
+        m_MethodName: TimeMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &61245342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,7 +1190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2462ffdee58c1fc4c978961a5e8917ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10d4abfeb8e9856428f787bbe38a8b86, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1302,8 +1314,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Swipe slider anda untuk mendapatkan skor, lakukan secara cepat untuk mendapatkan
-    skor lebih cepat.
+  m_Text: Tekan tombol random dengan tepat untuk mengoper bola. Jika bola jatuh di
+    area lawan, maka mendapat score
 --- !u!222 &1020725220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1683,7 +1695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Cara Bermain
+  m_Text: Cara Bermain Ma'raga
 --- !u!222 &1355196564
 CanvasRenderer:
   m_ObjectHideFlags: 0
