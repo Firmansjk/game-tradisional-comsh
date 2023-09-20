@@ -16,28 +16,24 @@ public class GameDataLoader : MonoBehaviour
         string playerOneSelectedCharacter = PlayerPrefs.GetString("PlayerOneSelectedCharacter");
         int playerOneScore = PlayerPrefs.GetInt("PlayerOneScore");
         string playerOneAvatar = PlayerPrefs.GetString("PlayerOneAvatar");
-        string playerOneName = PlayerPrefs.GetString("PlayerOneName");
 
         string playerTwoSelectedCharacter = PlayerPrefs.GetString("PlayerTwoSelectedCharacter");
         int playerTwoScore = PlayerPrefs.GetInt("PlayerTwoScore");
         string playerTwoAvatar = PlayerPrefs.GetString("PlayerTwoAvatar");
-        string playerTwoName = PlayerPrefs.GetString("PlayerTwoName");
 
         // Assign the retrieved data to the appropriate game objects or variables in your scene.
-        playerOneNameText.text = playerOneName;
-        playerTwoNameText.text = playerTwoName;
-        playerOneScoreText.text = playerOneScore.ToString();
-        playerTwoScoreText.text = playerTwoScore.ToString();
+        playerOneNameText.text = playerOneSelectedCharacter;
+        playerTwoNameText.text = playerTwoSelectedCharacter;
+        //playerOneScoreText.text = playerOneScore.ToString();
+        //playerTwoScoreText.text = playerTwoScore.ToString();
 
         // Log the retrieved data to the console to check if it's correct.
-        Debug.Log("Player One Character: " + playerOneSelectedCharacter);
         Debug.Log("Player One Score: " + playerOneScore);
         Debug.Log("Player One Avatar: " + playerOneAvatar);
-        Debug.Log("Player One Name: " + playerOneName);
+        Debug.Log("Player One Name: " + playerOneSelectedCharacter);
 
-        Debug.Log("Player Two Character: " + playerTwoSelectedCharacter);
         Debug.Log("Player Two Score: " + playerTwoScore);
         Debug.Log("Player Two Avatar: " + playerTwoAvatar);
-        Debug.Log("Player Two Name: " + playerTwoName);
+        Debug.Log("Player Two Name: " + playerTwoSelectedCharacter);
     }
 }
