@@ -14,29 +14,29 @@ public class SliderController : MonoBehaviour
 
     void Start()
     {
-        sliderObject.minValue = 0;
-        sliderObject.maxValue = 100;
-        sliderObject.wholeNumbers = true;
-        sliderObject.value = 50;
+        //sliderObject.minValue = 0;
+        //sliderObject.maxValue = 100;
+        //sliderObject.wholeNumbers = true;
+        //sliderObject.value = 50;
 
-        sliderObject2.minValue = 0;
-        sliderObject2.maxValue = 100;
-        sliderObject2.wholeNumbers = true;
-        sliderObject2.value = 50;
+        //sliderObject2.minValue = 0;
+        //sliderObject2.maxValue = 100;
+        //sliderObject2.wholeNumbers = true;
+        //sliderObject2.value = 50;
     }
 
     public void OnValueChange(float value)
     {
-        if (sliderObject.value == 100)
-        {
-            score += 1;
-            score1.text = score.ToString();
-        }
+        //if (sliderObject.value == 100)
+        //{
+        //    score += 1;
+        //    score1.text = score.ToString();
+        //}
 
-        if (sliderObject2.value == 100)
-        {
-            scoree += 1;
-            score2.text = scoree.ToString();
-        }
+        //if (sliderObject2.value == 100)
+        //{
+        //    scoree += 1;
+        //    score2.text = scoree.ToString();
+        //}
     }
 }
