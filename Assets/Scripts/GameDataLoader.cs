@@ -7,8 +7,6 @@ public class GameDataLoader : MonoBehaviour
     public Text playerTwoNameText;
     public Text playerOneScoreText;
     public Text playerTwoScoreText;
-    public Image playerOneAvatarImage;
-    public Image playerTwoAvatarImage;
 
     private void Start()
     {

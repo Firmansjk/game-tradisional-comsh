@@ -1044,6 +1044,7 @@ GameObject:
   - component: {fileID: 648033148}
   - component: {fileID: 648033149}
   - component: {fileID: 648033150}
+  - component: {fileID: 648033151}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1116,6 +1117,18 @@ MonoBehaviour:
   playerTwoNameText: {fileID: 1607245066}
   playerOneScoreText: {fileID: 2081013600}
   playerTwoScoreText: {fileID: 1038602569}
+--- !u!114 &648033151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648033146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeddb5da5d0adee47bf90f5be8fd60f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerOneAvatarImage: {fileID: 1831219164}
   playerTwoAvatarImage: {fileID: 1942030310}
 --- !u!1 &666747131

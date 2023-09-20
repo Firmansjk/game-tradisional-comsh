@@ -27,7 +27,7 @@ public class PlayerTwoCharacterSelection : MonoBehaviour
         playerSelectedCharacter = playerNameInput.text;
         //playerNameInput.text = playerSelectedCharacter;
         playerScoreText.text = "Player Two Score: " + playerScore;
-        playerAvatar = characters[selectedCharacter].ToString();
+        playerAvatar = characters[selectedCharacter].name;
     }
 
     public void NextChar()
