@@ -26,12 +26,12 @@ public class GameDataLoader : MonoBehaviour
         //playerTwoScoreText.text = playerTwoScore.ToString();
 
         // Log the retrieved data to the console to check if it's correct.
-        Debug.Log("Player One Score: " + playerOneScore);
-        Debug.Log("Player One Avatar: " + playerOneAvatar);
-        Debug.Log("Player One Name: " + playerOneSelectedCharacter);
+        //Debug.Log("Player One Score: " + playerOneScore);
+        //Debug.Log("Player One Avatar: " + playerOneAvatar);
+        //Debug.Log("Player One Name: " + playerOneSelectedCharacter);
 
-        Debug.Log("Player Two Score: " + playerTwoScore);
-        Debug.Log("Player Two Avatar: " + playerTwoAvatar);
-        Debug.Log("Player Two Name: " + playerTwoSelectedCharacter);
+        //Debug.Log("Player Two Score: " + playerTwoScore);
+        //Debug.Log("Player Two Avatar: " + playerTwoAvatar);
+        //Debug.Log("Player Two Name: " + playerTwoSelectedCharacter);
     }
 }
