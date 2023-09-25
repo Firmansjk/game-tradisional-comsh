@@ -18,6 +18,8 @@ public class MaragaBallScript : MonoBehaviour
     private float height;
     private float speed;
 
+    private bool isMoving = false;
+
     void Start()
     {
         if (points.Length < 4)
@@ -27,33 +29,79 @@ public class MaragaBallScript : MonoBehaviour
         }
 
         // Set initial start and end positions
+        currentPointIndex = 0; // Set the current point index to 0 (point 1)
         SetStartAndEndPositions();
 
         // Randomize height and speed within the specified range
         height = Random.Range(minHeight, maxHeight);
         speed = Random.Range(minSpeed, maxSpeed);
+
+        // Set the initial position of the ball to the first point
+        MoveToTargetPoint(currentPointIndex-1);
     }
 
     void Update()
     {
-        float distanceCovered = (Time.time - startTime) * speed;
-        float fractionOfJourney = distanceCovered / journeyLength;
-
-        // Calculate the parabolic motion
-        float yOffset = height * Mathf.Sin(fractionOfJourney * Mathf.PI);
-        Vector3 newPosition = Vector3.Lerp(startPos, endPos, fractionOfJourney) + Vector3.up * yOffset;
-
-        // Update the object's position
-        transform.position = newPosition;
-
-        if (fractionOfJourney >= 1f)
+        if (IsMoving)
         {
-            // Arrived at the destination, set the next start and end positions cyclically
-            SetStartAndEndPositions();
+            float distanceCovered = (Time.time - startTime) * speed;
+            float fractionOfJourney = distanceCovered / journeyLength;
 
-            // Randomize height and speed for the next segment
-            height = Random.Range(minHeight, maxHeight);
-            speed = Random.Range(minSpeed, maxSpeed);
+            // Calculate the parabolic motion
+            float yOffset = height * Mathf.Sin(fractionOfJourney * Mathf.PI);
+            Vector3 newPosition = Vector3.Lerp(startPos, endPos, fractionOfJourney) + Vector3.up * yOffset;
+
+            // Update the object's position
+            transform.position = newPosition;
+
+            if (fractionOfJourney >= 1f)
+            {
+                // Arrived at the destination, stop moving
+                IsMoving = false;
+            }
+        }
+    }
+
+    public void MoveToTargetPoint(int targetPointIndex)
+    {
+        if (IsMoving)
+        {
+            // Game over condition: Player pressed the button while the object was moving
+            Debug.Log("Game Over");
+            return;
+        }
+
+        if (targetPointIndex < 0 || targetPointIndex >= points.Length)
+        {
+            Debug.LogError("Invalid target point index.");
+            return;
+        }
+
+        // Set the target point and start moving
+        currentPointIndex = targetPointIndex;
+        SetStartAndEndPositions();
+        height = Random.Range(minHeight, maxHeight);
+        speed = Random.Range(minSpeed, maxSpeed);
+        IsMoving = true;
+    }
+
+    public bool IsMoving
+    {
+        get
+        {
+            return isMoving;
+        }
+
+        set
+        {
+            isMoving = value;
+        }
+    }
+    public int CurrentPointIndex
+    {
+        get 
+        { 
+            return currentPointIndex; 
         }
     }
 
