@@ -7,11 +7,15 @@ public class MaragaButtonController : MonoBehaviour
 {
     public MaragaBallScript maragaBall; // Reference to your MaragaBallScript
     public int targetPointIndex; // Set this in the inspector for each button (0, 1, 2, 3 for the four points).
-    public MaragaScore maragaScore;
+    //public MaragaScore maragaScore;
+    public Text p1ScoreText;
+    public Text p2ScoreText;
+    public int p1Score;
+    public int p2Score;
 
     private Button button;
 
-    private void Start()
+    private void Start() 
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(OnButtonClick);
@@ -27,12 +31,16 @@ public class MaragaButtonController : MonoBehaviour
             if (targetPointIndex == 1 || targetPointIndex == 4)
             {
                 // Button 1 or 4: Increment P2's score
-                maragaScore.IncrementPlayer2Score();
+                //maragaScore.IncrementPlayer2Score();
+                p2Score += 1;
+                p2ScoreText.text = p2Score.ToString();
             }
             else if (targetPointIndex == 2 || targetPointIndex == 3)
             {
                 // Button 2 or 3: Increment P1's score
-                maragaScore.IncrementPlayer1Score();
+                //maragaScore.IncrementPlayer1Score();
+                p1Score += 1;
+                p1ScoreText.text = p1Score.ToString();
             }
         }
         else

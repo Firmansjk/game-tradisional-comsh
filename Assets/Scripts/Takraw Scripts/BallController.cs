@@ -8,7 +8,7 @@ public class BallController : MonoBehaviour
     public Vector2 resetPosition;
 
     private Rigidbody2D rig;
-    //private PaddleController lastPaddle;
+    private PaddleController lastPaddle;
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class BallController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Paddle"))
         {
-            //lastPaddle = collision.collider.GetComponent<PaddleController>();
+            lastPaddle = collision.collider.GetComponent<PaddleController>();
         }
     }
 }
