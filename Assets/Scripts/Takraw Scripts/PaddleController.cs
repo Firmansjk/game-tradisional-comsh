@@ -5,12 +5,7 @@ using UnityEngine;
 public class PaddleController : MonoBehaviour
 {
     public float speed;
-    public KeyCode upKey;
-    public KeyCode downKey;
-
     private Rigidbody2D rig;
-    private Vector3 originalSize;
-    private float originalSpeed;
 
     void Start()
     {
@@ -19,26 +14,30 @@ public class PaddleController : MonoBehaviour
 
     void Update()
     {
-        MoveObject(GetInput());
+        MoveObject(GetTouchInput());
     }
 
-    private Vector2 GetInput()
+    private Vector2 GetTouchInput()
     {
-        if (Input.GetKey(upKey))
+        Vector2 movement = Vector2.zero;
+
+        if (Input.touchCount > 0)
         {
-            return Vector3.up * speed;
-        }
-        else if (Input.GetKey(downKey))
-        {
-            return Vector3.down * speed;
+            // Get the first touch (you can expand this for multiple touches)
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Moved)
+            {
+                // Calculate the movement based on touch position delta
+                movement = new Vector2(touch.deltaPosition.x, touch.deltaPosition.y) * speed;
+            }
         }
 
-        return Vector2.zero;
+        return movement;
     }
 
     private void MoveObject(Vector2 movement)
     {
-        //transform.Translate(movement * Time.deltaTime);
         rig.velocity = movement;
     }
 }
