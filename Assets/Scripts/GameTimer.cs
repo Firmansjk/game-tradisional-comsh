@@ -12,6 +12,8 @@ public class GameTimer : MonoBehaviour
     public float timeRemaining = 60f;
     public bool timeIsRunning = false;
     public Text timerText;
+    public Text p1Score;
+    public Text p2Score;
 
     // Update is called once per frame
     void Update()
@@ -29,6 +31,8 @@ public class GameTimer : MonoBehaviour
                 timeIsRunning = false;
                 timeText.SetActive(false);
                 winnerText.SetActive(true);
+                //Menambah score ke temporal
+                AddingScoreToTemporalPrefs();
                 Invoke("ToNextLevel", 5.0f);
             }
         }
@@ -56,5 +60,24 @@ public class GameTimer : MonoBehaviour
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    public void AddingScoreToTemporalPrefs()
+    {
+        int additionalP1score = int.Parse(p1Score.text);
+        int additionalP2score = int.Parse(p2Score.text);
+
+        // Retrieve scores from PlayerPrefs in Scene 2
+        int playerOneScore = PlayerPrefs.GetInt("PlayerOneScore");
+        int playerTwoScore = PlayerPrefs.GetInt("PlayerTwoScore");
+
+        // Add values to the scores
+        playerOneScore += additionalP1score;
+        playerTwoScore += additionalP2score;
+
+        // Save the updated scores
+        PlayerPrefs.SetInt("PlayerOneScore", playerOneScore);
+        PlayerPrefs.SetInt("PlayerTwoScore", playerTwoScore);
+        PlayerPrefs.Save();
     }
 }

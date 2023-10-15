@@ -16,8 +16,16 @@ public class HighscoresTable : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false); //kasih sembunyi template
 
+        //get value dari playerprefs temporal diawal
+        // Get the character and score values from PlayerPrefs
+        string playerOneCharacter = PlayerPrefs.GetString("PlayerOneSelectedCharacter");
+        string playerTwoCharacter = PlayerPrefs.GetString("PlayerTwoSelectedCharacter");
+        int playerOneScore = PlayerPrefs.GetInt("PlayerOneScore");
+        int playerTwoScore = PlayerPrefs.GetInt("PlayerTwoScore");
+
         //Menambah data
-        AddHighscoreEntry("CMYK", 10000); //ini mau dikasih berdasarkan playerprefs temporal yang dibikin untuk P1 dan P2
+        AddHighscoreEntry(playerOneCharacter, playerOneScore); //ini mau dikasih berdasarkan playerprefs temporal yang dibikin untuk P1 dan P2
+        AddHighscoreEntry(playerTwoCharacter, playerTwoScore);
 
         //ambil data dari json
         string jsonString = PlayerPrefs.GetString("highscoreTable");

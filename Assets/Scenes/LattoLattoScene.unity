@@ -1150,6 +1150,8 @@ MonoBehaviour:
   timeRemaining: 60
   timeIsRunning: 0
   timerText: {fileID: 1672533740}
+  p1Score: {fileID: 2081013600}
+  p2Score: {fileID: 1038602569}
 --- !u!114 &648033150
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -268,8 +268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  upKey: 105
-  downKey: 106
 --- !u!1 &61245339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,6 +1410,8 @@ MonoBehaviour:
   timeRemaining: 60
   timeIsRunning: 0
   timerText: {fileID: 1672533740}
+  p1Score: {fileID: 600471582}
+  p2Score: {fileID: 641036091}
 --- !u!114 &648033150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,8 +1832,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  upKey: 119
-  downKey: 115
 --- !u!1 &1020725217
 GameObject:
   m_ObjectHideFlags: 0
