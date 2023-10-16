@@ -4,33 +4,48 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public Vector2 speed;
     public Vector2 resetPosition;
+    public float defaultSpeed = 5.0f;
 
-    private Rigidbody2D rig;
-    private PaddleController lastPaddle;
+    private Rigidbody2D rb;
+    private float currentSpeed;
 
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
-        rig.velocity = speed;
+        rb = GetComponent<Rigidbody2D>();
+        ResetSpeed();
     }
 
-    void Update()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        //transform.Translate(speed * Time.deltaTime);
+        if (collision.gameObject.CompareTag("Paddle"))
+        {
+            // Calculate the new direction of the ball
+            Vector2 hitPoint = collision.contacts[0].point;
+            Vector2 paddleCenter = collision.gameObject.transform.position;
+
+            float yOffset = hitPoint.y - paddleCenter.y;
+
+            // Calculate a normalized direction vector based on the Y offset
+            Vector2 direction = new Vector2(rb.velocity.x, yOffset).normalized;
+
+            // Increase the speed
+            currentSpeed += 1.0f; // You can adjust the increment value as needed
+
+            // Apply the new direction to the ball with the updated speed
+            rb.velocity = direction * currentSpeed;
+        }
     }
 
     public void ResetBall()
     {
         transform.position = new Vector3(resetPosition.x, resetPosition.y, 1);
+        ResetSpeed();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void ResetSpeed()
     {
-        if (collision.collider.CompareTag("Paddle"))
-        {
-            lastPaddle = collision.collider.GetComponent<PaddleController>();
-        }
+        currentSpeed = defaultSpeed;
+        rb.velocity = new Vector2(defaultSpeed, 0);
     }
 }
