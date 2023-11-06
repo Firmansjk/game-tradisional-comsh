@@ -42,7 +42,7 @@ public class P2PaddleController : MonoBehaviour
 
             if (Input.touchCount > 0)
             {
-                currentPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                currentPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(1).position);
             }
             else
             {

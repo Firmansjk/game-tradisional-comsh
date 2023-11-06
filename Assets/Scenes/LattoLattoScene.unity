@@ -1859,6 +1859,7 @@ GameObject:
   - component: {fileID: 1291154083}
   - component: {fileID: 1291154082}
   - component: {fileID: 1291154081}
+  - component: {fileID: 1291154084}
   m_Layer: 0
   m_Name: Orang Kanan
   m_TagString: Untagged
@@ -1950,6 +1951,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291154084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291154080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc82c876b49904ab5d8ae46d8649aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animP1: {fileID: 1291154081}
+  sliderP1: {fileID: 2131479197}
 --- !u!1 &1330721484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,6 +2408,7 @@ GameObject:
   - component: {fileID: 1717935727}
   - component: {fileID: 1717935726}
   - component: {fileID: 1717935725}
+  - component: {fileID: 1717935728}
   m_Layer: 0
   m_Name: Orang Kiri
   m_TagString: Untagged
@@ -2484,6 +2500,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1717935728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717935724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7848b7e694b4e49a1db7d05c555510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animP2: {fileID: 1717935725}
+  sliderP2: {fileID: 352168887}
 --- !u!1 &1779109015
 GameObject:
   m_ObjectHideFlags: 0
