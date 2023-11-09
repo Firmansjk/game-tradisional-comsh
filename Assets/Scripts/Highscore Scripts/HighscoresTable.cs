@@ -23,9 +23,13 @@ public class HighscoresTable : MonoBehaviour
         int playerOneScore = PlayerPrefs.GetInt("PlayerOneScore");
         int playerTwoScore = PlayerPrefs.GetInt("PlayerTwoScore");
 
-        //Menambah data
-        AddHighscoreEntry(playerOneCharacter, playerOneScore); //ini mau dikasih berdasarkan playerprefs temporal yang dibikin untuk P1 dan P2
-        AddHighscoreEntry(playerTwoCharacter, playerTwoScore);
+        //if null
+        if (playerOneScore != 0 && playerTwoScore != 0)
+        {
+            //Menambah data
+            AddHighscoreEntry(playerOneCharacter, playerOneScore); //ini mau dikasih berdasarkan playerprefs temporal yang dibikin untuk P1 dan P2
+            AddHighscoreEntry(playerTwoCharacter, playerTwoScore);
+        }
 
         //ambil data dari json
         string jsonString = PlayerPrefs.GetString("highscoreTable");
