@@ -8,7 +8,7 @@ public class GameTimer : MonoBehaviour
 {
 
     [SerializeField] GameObject timeText;
-    [SerializeField] GameObject winnerText;
+    [SerializeField] GameObject winnerCanvas;
     public float timeRemaining = 60f;
     public bool timeIsRunning = false;
     public Text timerText;
@@ -30,7 +30,7 @@ public class GameTimer : MonoBehaviour
                 timeRemaining = 0;
                 timeIsRunning = false;
                 timeText.SetActive(false);
-                winnerText.SetActive(true);
+                winnerCanvas.SetActive(true);
                 //Menambah score ke temporal
                 AddingScoreToTemporalPrefs();
                 Invoke("ToNextLevel", 5.0f);

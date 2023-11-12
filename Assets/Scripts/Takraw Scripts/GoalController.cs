@@ -31,9 +31,9 @@ public class GoalController : MonoBehaviour
                 p2Score += 1;
                 p2ScoreText.text = p2Score.ToString();
             }
-            p1PaddleControllerScript.ResetPaddle();
-            p2PaddleControllerScript.ResetPaddle();
-            ballControllerScript.ResetBall();
+            //p1PaddleControllerScript.ResetPaddle();
+            //p2PaddleControllerScript.ResetPaddle();
+            //ballControllerScript.ResetBall();
         }
     }
 }
