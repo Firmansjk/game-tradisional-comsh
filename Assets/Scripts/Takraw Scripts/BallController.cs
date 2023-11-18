@@ -72,7 +72,7 @@ public class BallController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         // Check if Object A collided with another GameObject
         if (other.gameObject == goalP1)

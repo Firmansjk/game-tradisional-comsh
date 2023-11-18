@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 16675197}
   - component: {fileID: 16675200}
   - component: {fileID: 16675196}
+  - component: {fileID: 16675199}
   m_Layer: 0
   m_Name: Paddle P1
   m_TagString: Paddle
@@ -151,7 +152,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 16675195}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a55e15869f2457642858e04a2a28620d, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -198,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e83944807ff3ce746a1b5f89d41b6f6d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f17f79bd160c5447839c3889159a97a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -219,10 +220,32 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6, y: -2, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1441634779}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &16675199
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16675195}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 2
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!114 &16675200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +258,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e640b4e161143a4289b1d462b462cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 2
+  jumpForce: 10
+  jumpYThreshold: 1
+  radius: 0.3
+  groundChecker: {fileID: 1441634779}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &61245339
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &237109805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,7 +1495,7 @@ RectTransform:
   m_GameObject: {fileID: 666747131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.35, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1558228246}
   m_RootOrder: 4
@@ -1487,14 +1518,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a71a949259676d14a8223d7207db5f56, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1761,6 +1792,7 @@ GameObject:
   - component: {fileID: 1013254127}
   - component: {fileID: 1013254130}
   - component: {fileID: 1013254126}
+  - component: {fileID: 1013254129}
   m_Layer: 0
   m_Name: Paddle P2
   m_TagString: Paddle
@@ -1777,7 +1809,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1013254125}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a55e15869f2457642858e04a2a28620d, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1824,7 +1856,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29fbe282a7036ce46b8bb5d6e0ba89eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79942b3bd38d7e24aae43168786202c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1845,10 +1877,32 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6, y: -2, z: 0}
   m_LocalScale: {x: 0.08, y: 0.09, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1956163183}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1013254129
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013254125}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 2
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!114 &1013254130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1861,6 +1915,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c72c688cd6ab84fa53993dd98c6bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 2
+  jumpForce: 10
+  jumpYThreshold: 1
+  radius: 0.3
+  groundChecker: {fileID: 1956163183}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1020725217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,8 +1993,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Tekan tombol pada karakter yang mendapat bola untuk mengoper bola. Jika
-    pemain tidak tepat menekan tombolnya, maka score akan didapatkan lawan
+  m_Text: Tekan dan tahan karakter pemain untuk menggerakkan. Cetak poin dengan cara
+    memasukkan bola ke wilayah lawan.
 --- !u!222 &1020725220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2042,7 +2104,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a55e15869f2457642858e04a2a28620d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 2
   m_CollisionDetection: 0
@@ -2529,6 +2591,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385589471}
   m_CullTransparentMesh: 1
+--- !u!1 &1441634778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1441634779}
+  m_Layer: 0
+  m_Name: GroundChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1441634779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441634778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 16675198}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1549410267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,7 +2889,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2823,7 +2915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1750736145}
   - component: {fileID: 1750736146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goal P1
   m_TagString: Goal
   m_Icon: {fileID: 0}
@@ -2854,7 +2946,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2911,7 +3003,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2954,7 +3046,7 @@ RectTransform:
   m_GameObject: {fileID: 1820603033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1558228246}
   m_RootOrder: 3
@@ -2977,14 +3069,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 43c964488da7a0746b43ce4d67c7aa59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3111,6 +3203,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932318872}
   m_CullTransparentMesh: 1
+--- !u!1 &1956163182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956163183}
+  m_Layer: 0
+  m_Name: GroundChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1956163183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956163182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1013254128}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1979492732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,7 +3353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040569030}
   - component: {fileID: 2040569031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goal P2
   m_TagString: Goal
   m_Icon: {fileID: 0}
@@ -3262,7 +3384,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
