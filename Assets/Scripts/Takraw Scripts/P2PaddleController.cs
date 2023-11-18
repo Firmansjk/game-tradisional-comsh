@@ -41,16 +41,28 @@ public class P2PaddleController : MonoBehaviour
 
     private void Update()
     {
+
         if (isDragging)
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 newPosition = new Vector3(mousePosition.x + offset.x, transform.position.y, transform.position.z);
 
             transform.position = Vector3.Lerp(transform.position, newPosition, moveSpeed * Time.deltaTime);
-
+            //jump
             if (mousePosition.y > jumpYThreshold && isGrounded())
             {
                 Jump();
+            }
+            //mobile
+            if (Input.touchCount > 0)
+            {
+                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                Vector3 newTouchPosition = new Vector3(touchPosition.x + offset.x, transform.position.y, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, newTouchPosition, moveSpeed * Time.deltaTime);
+                if (touchPosition.y > jumpYThreshold && isGrounded())
+                {
+                    Jump();
+                }
             }
         }
     }
