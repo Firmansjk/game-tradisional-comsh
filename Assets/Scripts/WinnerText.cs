@@ -12,6 +12,7 @@ public class WinnerText : MonoBehaviour
     public GameObject imageP1;
     public GameObject imageP2;
     public GameObject imageDraw;
+    public GameObject imageMenang;
     public void Start()
     {
         whosTheWinner();
@@ -39,6 +40,7 @@ public class WinnerText : MonoBehaviour
         {
             //winnerIs.text = "Draw!";
             imageDraw.SetActive(true);
+            imageMenang.SetActive(false);
         }
     }
 }

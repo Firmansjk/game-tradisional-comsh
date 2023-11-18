@@ -52,18 +52,19 @@ public class HighscoresTable : MonoBehaviour
         }
 
         //testing function create
-        highscoreEntryTransformList = new List<Transform>();
-        foreach (HighScoreEntry highscoreEntry in highscores.highscoreEntryList)
-        {
-            CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
-        }
+        //highscoreEntryTransformList = new List<Transform>();
+        //foreach (HighScoreEntry highscoreEntry in highscores.highscoreEntryList)
+        //{
+        //    CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+        //}
 
-        //saving pakai jsonutility
-        /*Highscores highscores = new Highscores { highscoreEntryList = highscoreEntryList }; //semacam third-party dari bawah
-        string json = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("highscoreTable", json);
-        PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetString("highscoreTable"));*/
+        //testing function create max 10 baris
+        highscoreEntryTransformList = new List<Transform>();
+        int maxEntriesToShow = 10; // Set the maximum number of entries to display
+        for (int i = 0; i < Mathf.Min(maxEntriesToShow, highscores.highscoreEntryList.Count); i++)
+        {
+            CreateHighscoreEntryTransform(highscores.highscoreEntryList[i], entryContainer, highscoreEntryTransformList);
+        }
     }
 
     /*Function untuk membuat table highscore entry*/

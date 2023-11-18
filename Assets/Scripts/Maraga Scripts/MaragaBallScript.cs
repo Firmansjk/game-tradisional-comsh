@@ -4,113 +4,59 @@ using UnityEngine;
 
 public class MaragaBallScript : MonoBehaviour
 {
-    public Transform[] points; // Array of possible points
-    public float minHeight = 5f; // Minimum height of the parabola
-    public float maxHeight = 8f; // Maximum height of the parabola
-    public float minSpeed = 5f; // Minimum speed of movement
-    public float maxSpeed = 8f; // Maximum speed of movement
+    public MaragaScore maragaScoreScript;
 
-    private int currentPointIndex = 0;
-    private Vector3 startPos;
-    private Vector3 endPos;
-    private float journeyLength;
-    private float startTime;
-    private float height;
-    private float speed;
+    public GameObject char1;
+    public GameObject char2;
+    public GameObject char3;
+    public GameObject char4;
 
-    private bool isMoving = false;
+    public Vector3 spawn1;
+    public Vector3 spawn2;
+    public Vector3 spawn3;
+    public Vector3 spawn4;
 
-    void Start()
+    public GameObject pembatas1;
+    public GameObject pembatas2;
+    public GameObject pembatas3;
+    public GameObject pembatas4;
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (points.Length < 4)
+        if (collision.gameObject == char1)
         {
-            Debug.LogError("Please assign at least 4 points in the inspector.");
-            return;
+            maragaScoreScript.IncrementPlayer1Score();
+            transform.position = spawn1;
         }
-
-        // Set initial start and end positions
-        currentPointIndex = 0; // Set the current point index to 0 (point 1)
-        SetStartAndEndPositions();
-
-        // Randomize height and speed within the specified range
-        height = Random.Range(minHeight, maxHeight);
-        speed = Random.Range(minSpeed, maxSpeed);
-
-        // Set the initial position of the ball to the first point
-        MoveToTargetPoint(currentPointIndex-1);
-    }
-
-    void Update()
-    {
-        if (IsMoving)
+        if (collision.gameObject == char2)
         {
-            float distanceCovered = (Time.time - startTime) * speed;
-            float fractionOfJourney = distanceCovered / journeyLength;
-
-            // Calculate the parabolic motion
-            float yOffset = height * Mathf.Sin(fractionOfJourney * Mathf.PI);
-            Vector3 newPosition = Vector3.Lerp(startPos, endPos, fractionOfJourney) + Vector3.up * yOffset;
-
-            // Update the object's position
-            transform.position = newPosition;
-
-            if (fractionOfJourney >= 1f)
-            {
-                // Arrived at the destination, stop moving
-                IsMoving = false;
-            }
+            maragaScoreScript.IncrementPlayer2Score();
+            transform.position = spawn2;
         }
-    }
-
-    public void MoveToTargetPoint(int targetPointIndex)
-    {
-        if (IsMoving)
+        if (collision.gameObject == char3)
         {
-            // Game over condition: Player pressed the button while the object was moving
-            Debug.Log("Game Over");
-            return;
+            maragaScoreScript.IncrementPlayer2Score();
+            transform.position = spawn3;
         }
-
-        if (targetPointIndex < 0 || targetPointIndex >= points.Length)
+        if (collision.gameObject == char4)
         {
-            Debug.LogError("Invalid target point index.");
-            return;
+            maragaScoreScript.IncrementPlayer1Score();
+            transform.position = spawn4;
         }
-
-        // Set the target point and start moving
-        currentPointIndex = targetPointIndex;
-        SetStartAndEndPositions();
-        height = Random.Range(minHeight, maxHeight);
-        speed = Random.Range(minSpeed, maxSpeed);
-        IsMoving = true;
-    }
-
-    public bool IsMoving
-    {
-        get
+        if (collision.gameObject == pembatas1)
         {
-            return isMoving;
+            transform.position = spawn1;
         }
-
-        set
+        if (collision.gameObject == pembatas2)
         {
-            isMoving = value;
+            transform.position = spawn2;
         }
-    }
-    public int CurrentPointIndex
-    {
-        get 
-        { 
-            return currentPointIndex; 
+        if (collision.gameObject == pembatas3)
+        {
+            transform.position = spawn3;
         }
-    }
-
-    private void SetStartAndEndPositions()
-    {
-        startPos = points[currentPointIndex].position;
-        currentPointIndex = (currentPointIndex + 1) % points.Length; // Move to the next point cyclically
-        endPos = points[currentPointIndex].position;
-        journeyLength = Vector3.Distance(startPos, endPos);
-        startTime = Time.time;
+        if (collision.gameObject == pembatas4)
+        {
+            transform.position = spawn4;
+        }
     }
 }

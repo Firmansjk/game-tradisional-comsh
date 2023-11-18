@@ -1123,12 +1123,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864ea6342f64d1409938b52329abf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winnerIs: {fileID: 0}
   scoreP1: {fileID: 2081013600}
   scoreP2: {fileID: 1038602569}
   imageP1: {fileID: 1399117472}
   imageP2: {fileID: 1223224429}
   imageDraw: {fileID: 1826985629}
+  imageMenang: {fileID: 730288891}
 --- !u!1 &648033146
 GameObject:
   m_ObjectHideFlags: 0

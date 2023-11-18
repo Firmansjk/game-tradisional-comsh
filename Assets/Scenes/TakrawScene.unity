@@ -782,6 +782,7 @@ MonoBehaviour:
   imageP1: {fileID: 816946344}
   imageP2: {fileID: 2144597791}
   imageDraw: {fileID: 293412135}
+  imageMenang: {fileID: 1105680031}
 --- !u!114 &214454168
 MonoBehaviour:
   m_ObjectHideFlags: 0

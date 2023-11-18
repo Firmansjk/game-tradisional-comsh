@@ -23,7 +23,6 @@ public class P1PaddleController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-
     private void OnMouseDown()
     {
         // Set the dragging flag to true when the object is clicked
@@ -41,28 +40,47 @@ public class P1PaddleController : MonoBehaviour
 
     private void Update()
     {
-
         if (isDragging)
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 newPosition = new Vector3(mousePosition.x + offset.x, transform.position.y, transform.position.z);
 
             transform.position = Vector3.Lerp(transform.position, newPosition, moveSpeed * Time.deltaTime);
+
             //jump
             if (mousePosition.y > jumpYThreshold && isGrounded())
             {
                 Jump();
             }
-            //mobile
-            if (Input.touchCount > 0)
+        }
+
+        // Mobile input
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+
+            switch (touch.phase)
             {
-                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-                Vector3 newTouchPosition = new Vector3(touchPosition.x + offset.x, transform.position.y, transform.position.z);
-                transform.position = Vector3.Lerp(transform.position, newTouchPosition, moveSpeed * Time.deltaTime);
-                if (touchPosition.y > jumpYThreshold && isGrounded())
-                {
-                    Jump();
-                }
+                case TouchPhase.Began:
+                    isDragging = true;
+                    offset = transform.position - touchPosition;
+                    break;
+
+                case TouchPhase.Moved:
+                    Vector3 newTouchPosition = new Vector3(touchPosition.x + offset.x, transform.position.y, transform.position.z);
+                    transform.position = Vector3.Lerp(transform.position, newTouchPosition, moveSpeed * Time.deltaTime);
+
+                    // Jump
+                    if (touchPosition.y > jumpYThreshold && isGrounded())
+                    {
+                        Jump();
+                    }
+                    break;
+
+                case TouchPhase.Ended:
+                    isDragging = false;
+                    break;
             }
         }
     }
@@ -77,5 +95,4 @@ public class P1PaddleController : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundChecker.position, radius, whatIsGround);
     }
-    
 }

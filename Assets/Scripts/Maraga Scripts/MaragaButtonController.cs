@@ -5,56 +5,80 @@ using UnityEngine.UI;
 
 public class MaragaButtonController : MonoBehaviour
 {
-    public MaragaBallScript maragaBall; // Reference to your MaragaBallScript
-    public int targetPointIndex; // Set this in the inspector for each button (0, 1, 2, 3 for the four points).
-    //public MaragaScore maragaScore;
-    public Text p1ScoreText;
-    public Text p2ScoreText;
-    public int p1Score;
-    public int p2Score;
+    public float launchSpeed = 10f;
 
-    private Button button;
+    private bool isDragging = false;
+    private Vector2 dragStartPosition;
 
-    private void Start() 
+    void Update()
     {
-        button = GetComponent<Button>();
-        button.onClick.AddListener(OnButtonClick);
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    StartDragging(touch.position);
+                    break;
+
+                case TouchPhase.Moved:
+                    if (isDragging)
+                    {
+                        // Calculate the swipe direction
+                        Vector2 swipeDirection = touch.position - dragStartPosition;
+
+                        // Update the rotation of the pointer for visual feedback
+                        //float angle = Mathf.Atan2(swipeDirection.y, swipeDirection.x) * Mathf.Rad2Deg;
+                        //transform.rotation = Quaternion.Euler(0f, 0f, angle);
+                    }
+                    break;
+
+                case TouchPhase.Ended:
+                    EndDragging(touch.position);
+                    break;
+            }
+        }
     }
 
-    private void OnButtonClick()
+    void StartDragging(Vector2 position)
     {
-        if (maragaBall.IsMoving)
+        isDragging = true;
+        dragStartPosition = position;
+    }
+
+    void EndDragging(Vector2 position)
+    {
+        if (isDragging)
         {
-            // Game over condition: Player pressed the button while the object was moving
-            //Debug.Log("Game Over");
-            // Increment the score based on the button pressed
-            if (targetPointIndex == 1 || targetPointIndex == 4)
-            {
-                // Button 1 or 4: Increment P2's score
-                //maragaScore.IncrementPlayer2Score();
-                p2Score += 1;
-                p2ScoreText.text = p2Score.ToString();
-            }
-            else if (targetPointIndex == 2 || targetPointIndex == 3)
-            {
-                // Button 2 or 3: Increment P1's score
-                //maragaScore.IncrementPlayer1Score();
-                p1Score += 1;
-                p1ScoreText.text = p1Score.ToString();
-            }
+            isDragging = false;
+
+            // Reset the rotation of the pointer after the drag ends
+            transform.rotation = Quaternion.identity;
+
+            // Calculate the swipe direction
+            Vector2 swipeDirection = position - dragStartPosition;
+
+            // Launch the ball based on the swipe direction
+            LaunchBall(swipeDirection.normalized);
+        }
+    }
+
+    void LaunchBall(Vector2 launchDirection)
+    {
+        GameObject ball = GameObject.Find("Bola"); // Replace "Bola" with the actual name of your ball object
+
+        // Check if the ball GameObject is found
+        if (ball != null)
+        {
+            Rigidbody2D ballRb = ball.GetComponent<Rigidbody2D>();
+
+            // Adjust the launch speed based on your needs
+            ballRb.velocity = launchDirection * launchSpeed;
         }
         else
         {
-            if (targetPointIndex == maragaBall.CurrentPointIndex)
-            {
-                // Only allow the ball to move if the button corresponds to the current point
-                maragaBall.MoveToTargetPoint(targetPointIndex);
-            }
-            else
-            {
-                // Button press does nothing if the ball is not at the corresponding point
-                Debug.Log("Ball is not at the corresponding point.");
-            }
+            Debug.LogError("Ball GameObject not found. Make sure the correct name is used.");
         }
     }
 }
