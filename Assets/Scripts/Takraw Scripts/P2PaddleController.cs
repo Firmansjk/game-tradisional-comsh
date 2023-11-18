@@ -43,13 +43,11 @@ public class P2PaddleController : MonoBehaviour
     {
         if (isDragging)
         {
-            // Calculate the new position based on the mouse position and the offset
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // Calculate the new position based on the mouse position and the offset
-            Vector3 newPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x + offset.x, transform.position.y, transform.position.z);
+            Vector3 newPosition = new Vector3(mousePosition.x + offset.x, transform.position.y, transform.position.z);
 
-            // Move the object to the new position smoothly
             transform.position = Vector3.Lerp(transform.position, newPosition, moveSpeed * Time.deltaTime);
+
             if (mousePosition.y > jumpYThreshold && isGrounded())
             {
                 Jump();
@@ -67,4 +65,5 @@ public class P2PaddleController : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundChecker.position, radius, whatIsGround);
     }
+
 }
