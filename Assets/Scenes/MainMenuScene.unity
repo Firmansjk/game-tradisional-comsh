@@ -241,6 +241,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &11026984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +318,7 @@ RectTransform:
   m_GameObject: {fileID: 59424922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 4, z: 1}
+  m_LocalScale: {x: 5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2114382871}
   m_RootOrder: 1
@@ -314,7 +326,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 270}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59424924
 MonoBehaviour:
@@ -336,7 +348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ae65583592a4964898159b263a5e45e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc10ca4e85a3ca644916063944f4f7f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -519,6 +531,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -738,6 +762,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &274428084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,6 +972,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2114382872}
         m_TargetAssemblyTypeName: SceneMoving, Assembly-CSharp
         m_MethodName: LoadHighscoreScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1623,6 +1671,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &590717226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,6 +1954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19675bfbf949273449d640ab754f5633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songMainMenu: {fileID: 8300000, guid: 764e88212da48494f9f142af091a386c, type: 3}
+  songInGame: {fileID: 8300000, guid: bcc9f87d8b27088498497f72e143b976, type: 3}
 --- !u!1 &631906694
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,6 +2169,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &745681662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,7 +2278,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2215,12 +2289,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Ma'raga adalah permainan tradisional yang berasal dari Indonesia. Dalam
-    permainan ini, para pemain melempar dan menangkap bola dari bahan yang dilipat,
-    biasanya dari anyaman bambu. Tujuan permainan ini adalah untuk menjaga bola tetap
-    bergerak di udara dan mencegah jatuh ke tanah. Ma'raga melibatkan keterampilan
-    tangan yang presisi dan koordinasi antara pemain, sambil juga mempromosikan interaksi
-    sosial dan kebersamaan dalam kelompok.
+  m_Text: "Di Makassar, dalam berbagai seremonial atau pesta rakyat, permainan Ma\u2019raga
+    masih digelar sebagai pendukung acara.  Para pemain pa\u2019raga biasanya adalah
+    para pemuda yang terampil dan terlatih baik. Mereka mengenakan pakaian adat yang
+    terdiri dari passapu (penutup kepala khas Makassar berbetuk segi tiga), baju
+    tutup (jas tradisional), dan lipa sabbe (sarung khas Makassar yang terbuat dari
+    kain sutera), para pemuda ini beratraksi."
 --- !u!222 &768217853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2339,6 +2413,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2736,6 +2822,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &938231872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2959,6 +3057,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1155196613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3056,7 +3166,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3067,14 +3177,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Takraw tradisional adalah permainan bola yang berasal dari Asia Tenggara,
-    terutama populer di negara-negara seperti Malaysia, dan Indonesia. Permainan
-    ini melibatkan pemain yang menggunakan kaki, lutut, dada, dan kepala untuk mengoper
-    bola bambu atau plastik melintasi jaring tengah lapangan. Tujuannya adalah menjaga
-    bola tetap berada di udara dan mengarahkannya ke arah tim lawan tanpa jatuh ke
-    tanah. Takraw menggabungkan keterampilan akrobatik, fleksibilitas, dan koordinasi
-    mata-kaki yang tinggi, menciptakan permainan yang menarik dan atraktif untuk
-    ditonton maupun dimainkan.
+  m_Text: "Asal muasal olahraga sepak takraw adalah sepak raga yakni sebuah permainan
+    yang memainkan bola rotan yang dipadu dengan gerakan mirip akrobat. Permainan
+    ini merupakan sebuah budaya tradisional khas dari Makassar Sulawesi Selatan.
+    Salah satu tokoh masyarakat yang mengembangkan sepak raga di Desa Kaemba, Dusun
+    Patte\u2019ne, Kabupaten Maros yakni M.Dahlan Dg Gassing, mengungkapkan bahwa
+    ma\u2019raga atau gerakan melakukan raga dengan menggunakan bola rotan ini, pada
+    dasarnya adalah terdiri dari  gerakan-gerakan seni bela diri. menciptakan permainan
+    yang menarik dan atraktif untuk ditonton maupun dimainkan."
 --- !u!222 &1178119520
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3181,6 +3291,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3302,6 +3424,133 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249793673}
   m_CullTransparentMesh: 1
+--- !u!1 &1323530357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1323530358}
+  - component: {fileID: 1323530359}
+  m_Layer: 0
+  m_Name: Sfx Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1323530358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323530357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1323530359
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323530357}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bd7eb695480e2264cb21510f0471687e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1356312500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3361,7 +3610,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 34
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3372,12 +3621,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Latto Latto adalah permainan tradisional yang berasal dari Indonesia. Permainan
-    ini melibatkan gerakan tangan dan mata untuk mengatur posisi jari-jari dengan
-    cepat dan akurat. Para pemain akan saling menantang untuk meniru pola gerakan
-    yang diberikan oleh pemimpin permainan. Latto Latto mempromosikan koordinasi
-    mata dan tangan serta kecepatan reaksi, sambil juga menjadi cara yang menyenangkan
-    untuk berinteraksi dan bersosialisasi.
+  m_Text: Latto-Latto adalah permainan tradisiona suku Bugis yang sudah ada sejak
+    tahun 1960-an,Nama asli dari latto-latto sendiri adalah clankers. Setelah populer
+    di era tahun 1970-an, clankers kemudian sempat dilarang karena sempat memakan
+    korban. Saat itu, bahan yang digunakan bukanlah plastik atau karet keras, namun
+    menggunakan kaca dan plastik yang cukup mudah pecah, dan rawan mencederai pemainnya.
+    Namun setelah melewati berbagai modifikasi, jadilah latto-latto yang sekarang
+    kita kenal dimainkan oleh anak-anak dan bahkan orang dewasa di Indonesia saat
+    ini.
 --- !u!222 &1356312503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3571,6 +3822,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3911,6 +4174,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2056032467}
         m_TargetAssemblyTypeName: SceneMoving, Assembly-CSharp
         m_MethodName: LoadPreparationScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1323530359}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5281,6 +5556,7 @@ GameObject:
   - component: {fileID: 2114382869}
   - component: {fileID: 2114382868}
   - component: {fileID: 2114382872}
+  - component: {fileID: 2114382873}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5385,5 +5661,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 227793beda92aec498fb11339bdcbf88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2114382873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114382867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbab9a9690cf2342a72cd80387b6df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

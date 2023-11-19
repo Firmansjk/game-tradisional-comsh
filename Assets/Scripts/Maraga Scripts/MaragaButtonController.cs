@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MaragaButtonController : MonoBehaviour
 {
     public float launchSpeed = 10f;
+    public bool canLaunchBall = true;
 
     private bool isDragging = false;
     private Vector2 dragStartPosition;
@@ -58,9 +59,12 @@ public class MaragaButtonController : MonoBehaviour
 
             // Calculate the swipe direction
             Vector2 swipeDirection = position - dragStartPosition;
-
-            // Launch the ball based on the swipe direction
-            LaunchBall(swipeDirection.normalized);
+            if (canLaunchBall == true)
+            {
+                // Launch the ball based on the swipe direction
+                LaunchBall(swipeDirection.normalized);
+                canLaunchBall = false;
+            }
         }
     }
 
