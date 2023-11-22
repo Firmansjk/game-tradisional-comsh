@@ -8,6 +8,7 @@ public class PlayerOneSliderControl : MonoBehaviour
     public Slider sliderObject;
     public Text scoreText;
     public int score = 0;
+    public bool isScoring;
 
     void Start()
     {
@@ -15,14 +16,23 @@ public class PlayerOneSliderControl : MonoBehaviour
         sliderObject.maxValue = 100;
         sliderObject.wholeNumbers = true;
         sliderObject.value = 50;
+        isScoring = true;
     }
 
     public void OnValueChange(float value)
     {
-        if (sliderObject.value == 100)
+        if (isScoring)
         {
-            score += 1;
-            scoreText.text = score.ToString();
+            if (sliderObject.value == 100)
+            {
+                score += 1;
+                scoreText.text = score.ToString();
+                isScoring = false;
+            }
+        }
+        if (sliderObject.value == 0)
+        {
+            isScoring = true;
         }
     }
 }

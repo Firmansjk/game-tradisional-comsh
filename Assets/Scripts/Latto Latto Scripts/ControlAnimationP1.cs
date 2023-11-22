@@ -15,6 +15,14 @@ public class ControlAnimationP1 : MonoBehaviour
 
     void Update()
     {
-        animP1.Play("Lattolattokanan", -1, sliderP1.normalizedValue);
+        float normalizedValue = sliderP1.normalizedValue;
+
+        // Check if the slider value is at the maximum
+        if (normalizedValue == 1.0f)
+        {
+            // If at maximum, set the normalizedValue to 0.999 to stay in the last frame
+            normalizedValue = 0.999f;
+        }
+        animP1.Play("Lattolattokanan", -1, normalizedValue);
     }
 }
