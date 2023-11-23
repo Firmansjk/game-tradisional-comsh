@@ -4,40 +4,86 @@ using UnityEngine;
 
 public class PaddleController : MonoBehaviour
 {
-    public float speed;
-    private Rigidbody2D rig;
+    public GameObject playerPaddle;
 
-    void Start()
+    private bool isDragging = false;
+    private Vector3 offset;
+    public Rigidbody2D rb;
+
+    public float moveSpeed = 2f;
+    public float jumpForce = 10f;
+    public int jumpYThreshold = 1;
+
+    // ground checker
+    public float radius;
+    public Transform groundChecker;
+    public LayerMask whatIsGround;
+
+    private void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
+        rb = playerPaddle.GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void OnMouseDown()
     {
-        MoveObject(GetTouchInput());
+        // Set the dragging flag to true when the object is clicked
+        isDragging = true;
+
+        // Calculate the offset between the object's position and the mouse position
+        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    private Vector2 GetTouchInput()
+    private void OnMouseUp()
     {
-        Vector2 movement = Vector2.zero;
+        // Set the dragging flag to false when the mouse button is released
+        isDragging = false;
+    }
 
-        if (Input.touchCount > 0)
+    private void Update()
+    {
+        if (isDragging)
         {
-            // Get the first touch (you can expand this for multiple touches)
-            Touch touch = Input.GetTouch(0);
+            Vector3 inputPosition = Input.mousePosition;
 
-            if (touch.phase == TouchPhase.Moved)
+            if (Input.touchCount > 0)
             {
-                // Calculate the movement based on touch position delta
-                movement = new Vector2(touch.deltaPosition.x, touch.deltaPosition.y) * speed;
+                // Use the position of the first touch for mobile devices
+                inputPosition = Input.GetTouch(0).position;
+            }
+
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(inputPosition);
+
+            if (gameObject.name == "Paddle P1")
+            {
+                HandlePaddleMovement(mousePosition, 0);
+            }
+            else if (gameObject.name == "Paddle P2")
+            {
+                HandlePaddleMovement(mousePosition, 1);
             }
         }
-
-        return movement;
     }
 
-    private void MoveObject(Vector2 movement)
+    private void HandlePaddleMovement(Vector3 targetPosition, int touchIndex)
     {
-        rig.velocity = movement;
+        Vector3 newTargetPosition = new Vector3(targetPosition.x + offset.x, transform.position.y, transform.position.z);
+        transform.position = Vector3.Lerp(transform.position, newTargetPosition, moveSpeed * Time.deltaTime);
+
+        // Jump
+        if (targetPosition.y > jumpYThreshold && isGrounded())
+        {
+            Jump();
+        }
+    }
+
+    public void Jump()
+    {
+        // Apply an upward force to make the character jump
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+    }
+
+    private bool isGrounded()
+    {
+        return Physics2D.OverlapCircle(groundChecker.position, radius, whatIsGround);
     }
 }
