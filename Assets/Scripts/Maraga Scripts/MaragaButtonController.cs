@@ -10,6 +10,8 @@ public class MaragaButtonController : MonoBehaviour
     public Sprite spriteTendang;
     public SpriteRenderer spriteRenderer;
 
+    public bool animasiMenendang = false;
+
     public float launchSpeed = 10f;
     public bool canLaunchBall = true;
 
@@ -86,7 +88,10 @@ public class MaragaButtonController : MonoBehaviour
             ballRb.velocity = launchDirection * launchSpeed;
 
             //animasi menendang
-            KickAnimation();
+            if (animasiMenendang)
+            {
+                KickAnimation();
+            }
         }
         else
         {
