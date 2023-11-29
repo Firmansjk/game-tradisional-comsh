@@ -50,6 +50,10 @@ public class MaragaBallScript : MonoBehaviour
             maragaButtonControllerScript2.canLaunchBall = true;
             maragaButtonControllerScript3.canLaunchBall = true;
             maragaButtonControllerScript4.canLaunchBall = true;
+            maragaButtonControllerScript1.IdleAnimation();
+            maragaButtonControllerScript2.IdleAnimation();
+            maragaButtonControllerScript3.IdleAnimation();
+            maragaButtonControllerScript4.IdleAnimation();
             char1.GetComponent<Collider2D>().enabled = false;
             char2.GetComponent<Collider2D>().enabled = true;
             char3.GetComponent<Collider2D>().enabled = true;
@@ -70,6 +74,10 @@ public class MaragaBallScript : MonoBehaviour
             maragaButtonControllerScript2.canLaunchBall = true;
             maragaButtonControllerScript3.canLaunchBall = true;
             maragaButtonControllerScript4.canLaunchBall = true;
+            maragaButtonControllerScript1.IdleAnimation();
+            maragaButtonControllerScript2.IdleAnimation();
+            maragaButtonControllerScript3.IdleAnimation();
+            maragaButtonControllerScript4.IdleAnimation();
             char1.GetComponent<Collider2D>().enabled = true;
             char2.GetComponent<Collider2D>().enabled = false;
             char3.GetComponent<Collider2D>().enabled = true;
@@ -90,6 +98,10 @@ public class MaragaBallScript : MonoBehaviour
             maragaButtonControllerScript2.canLaunchBall = true;
             maragaButtonControllerScript3.canLaunchBall = true;
             maragaButtonControllerScript4.canLaunchBall = true;
+            maragaButtonControllerScript1.IdleAnimation();
+            maragaButtonControllerScript2.IdleAnimation();
+            maragaButtonControllerScript3.IdleAnimation();
+            maragaButtonControllerScript4.IdleAnimation();
             char1.GetComponent<Collider2D>().enabled = true;
             char2.GetComponent<Collider2D>().enabled = true;
             char3.GetComponent<Collider2D>().enabled = false;
@@ -110,6 +122,10 @@ public class MaragaBallScript : MonoBehaviour
             maragaButtonControllerScript2.canLaunchBall = true;
             maragaButtonControllerScript3.canLaunchBall = true;
             maragaButtonControllerScript4.canLaunchBall = true;
+            maragaButtonControllerScript1.IdleAnimation();
+            maragaButtonControllerScript2.IdleAnimation();
+            maragaButtonControllerScript3.IdleAnimation();
+            maragaButtonControllerScript4.IdleAnimation();
             char1.GetComponent<Collider2D>().enabled = true;
             char2.GetComponent<Collider2D>().enabled = true;
             char3.GetComponent<Collider2D>().enabled = true;

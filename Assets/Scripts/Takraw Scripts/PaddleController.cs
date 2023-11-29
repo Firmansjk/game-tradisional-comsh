@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PaddleController : MonoBehaviour
 {
+    //sprite
+    public SpriteRenderer spriteRenderer;
+    public Sprite spriteJalan;
+    public Sprite spriteLompat;
+
+    public PaddleJump paddleJumpScript;
+
     public GameObject playerPaddle;
 
     public Rigidbody2D rb;
@@ -46,6 +53,14 @@ public class PaddleController : MonoBehaviour
     private void Update()
     {
         MovePlayer();
+        if (paddleJumpScript.isGrounded() == false)
+        {
+            LompatAnimation();
+        }
+        else
+        {
+            JalanAnimation();
+        }
     }
 
     public void MovePlayer()
@@ -67,5 +82,17 @@ public class PaddleController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
+    }
+
+    //peralihan sprite
+    public void JalanAnimation()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        this.spriteRenderer.sprite = spriteJalan;
+    }
+    public void LompatAnimation()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        this.spriteRenderer.sprite = spriteLompat;
     }
 }

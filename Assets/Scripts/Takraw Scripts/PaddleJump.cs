@@ -17,9 +17,10 @@ public class PaddleJump : MonoBehaviour
         {
             // Apply an upward force to make the character jump
             paddleControllerScript.rb.velocity = new Vector2(paddleControllerScript.rb.velocity.x, paddleControllerScript.jumpForce);
+
         }
     }
-    private bool isGrounded()
+    public bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundChecker.position, radius, whatIsGround);
     }

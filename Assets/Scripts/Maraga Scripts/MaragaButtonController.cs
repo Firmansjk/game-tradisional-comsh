@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class MaragaButtonController : MonoBehaviour
 {
+    //penambahan sprite
+    public Sprite spriteDiam;
+    public Sprite spriteTendang;
+    public SpriteRenderer spriteRenderer;
+
     public float launchSpeed = 10f;
     public bool canLaunchBall = true;
 
@@ -79,10 +84,24 @@ public class MaragaButtonController : MonoBehaviour
 
             // Adjust the launch speed based on your needs
             ballRb.velocity = launchDirection * launchSpeed;
+
+            //animasi menendang
+            KickAnimation();
         }
         else
         {
             Debug.LogError("Ball GameObject not found. Make sure the correct name is used.");
         }
+    }
+    //peralihan animasi
+    public void IdleAnimation()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        this.spriteRenderer.sprite = spriteDiam;
+    }
+    public void KickAnimation()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        this.spriteRenderer.sprite = spriteTendang;
     }
 }

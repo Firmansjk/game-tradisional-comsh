@@ -925,6 +925,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852e8ebae01976429b83445a07528bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteDiam: {fileID: 21300000, guid: 7504a4be7fca47844b7761439ecd5bd9, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 0f32ab4cf316b6a489840b1cff2b4d76, type: 3}
+  spriteRenderer: {fileID: 0}
   launchSpeed: 10
   canLaunchBall: 1
 --- !u!61 &165225459
@@ -3111,6 +3114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852e8ebae01976429b83445a07528bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteDiam: {fileID: 21300000, guid: e074ca81b91fa1b46840cf54c3548f9d, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 3c15fee708ce7e54191b5055e8e45fa4, type: 3}
+  spriteRenderer: {fileID: 0}
   launchSpeed: 10
   canLaunchBall: 1
 --- !u!61 &1137356246
@@ -3487,6 +3493,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852e8ebae01976429b83445a07528bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteDiam: {fileID: 21300000, guid: e074ca81b91fa1b46840cf54c3548f9d, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 3c15fee708ce7e54191b5055e8e45fa4, type: 3}
+  spriteRenderer: {fileID: 0}
   launchSpeed: 10
   canLaunchBall: 1
 --- !u!61 &1398863344
@@ -4496,6 +4505,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852e8ebae01976429b83445a07528bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteDiam: {fileID: 21300000, guid: 7504a4be7fca47844b7761439ecd5bd9, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 0f32ab4cf316b6a489840b1cff2b4d76, type: 3}
+  spriteRenderer: {fileID: 0}
   launchSpeed: 10
   canLaunchBall: 1
 --- !u!61 &2018651977
