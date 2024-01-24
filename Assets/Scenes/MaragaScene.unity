@@ -465,7 +465,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8719e31f558069f43ba4e3e9549f973f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e0d325f8f275dcb4b93856c2ce966cc1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa0ec6740e8b29847b0363065da8cbdd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09d623ff56949724bb8383c452068dfe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -888,7 +888,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7504a4be7fca47844b7761439ecd5bd9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8bfa69816d525af499746e66ab6fcbc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -925,8 +925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852e8ebae01976429b83445a07528bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteDiam: {fileID: 21300000, guid: 7504a4be7fca47844b7761439ecd5bd9, type: 3}
-  spriteTendang: {fileID: 21300000, guid: 0f32ab4cf316b6a489840b1cff2b4d76, type: 3}
+  spriteDiam: {fileID: 21300000, guid: 8bfa69816d525af499746e66ab6fcbc1, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 3f45739a217b75740b4e8343a79bb669, type: 3}
   spriteRenderer: {fileID: 0}
   animasiMenendang: 1
   launchSpeed: 10
@@ -948,7 +948,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16.76, y: 35.904266}
+    oldSize: {x: 11.200001, y: 39.82222}
     newSize: {x: 15.97, y: 35.901825}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bf5d5a81a29763f4e8b6fdd875f231dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92d304da77978504e85862390d309153, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1937,7 +1937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 277165bf2f07012468c18177b83b4392, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f06fcd1e04da8a4f962401aec04329c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3078,7 +3078,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e074ca81b91fa1b46840cf54c3548f9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66564ae88007cfe42afa16ab799be7a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3115,8 +3115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852e8ebae01976429b83445a07528bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteDiam: {fileID: 21300000, guid: e074ca81b91fa1b46840cf54c3548f9d, type: 3}
-  spriteTendang: {fileID: 21300000, guid: 3c15fee708ce7e54191b5055e8e45fa4, type: 3}
+  spriteDiam: {fileID: 21300000, guid: 66564ae88007cfe42afa16ab799be7a0, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 049076c6f74145e48bb5965bcb0ec56c, type: 3}
   spriteRenderer: {fileID: 0}
   animasiMenendang: 0
   launchSpeed: 10
@@ -3138,7 +3138,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16.83, y: 36.016552}
+    oldSize: {x: 11.200001, y: 39.82222}
     newSize: {x: 15.96, y: 35.91877}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3458,7 +3458,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e074ca81b91fa1b46840cf54c3548f9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66564ae88007cfe42afa16ab799be7a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3495,8 +3495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852e8ebae01976429b83445a07528bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteDiam: {fileID: 21300000, guid: e074ca81b91fa1b46840cf54c3548f9d, type: 3}
-  spriteTendang: {fileID: 21300000, guid: 3c15fee708ce7e54191b5055e8e45fa4, type: 3}
+  spriteDiam: {fileID: 21300000, guid: 66564ae88007cfe42afa16ab799be7a0, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 049076c6f74145e48bb5965bcb0ec56c, type: 3}
   spriteRenderer: {fileID: 0}
   animasiMenendang: 0
   launchSpeed: 10
@@ -3518,7 +3518,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16.83, y: 36.016552}
+    oldSize: {x: 11.200001, y: 39.82222}
     newSize: {x: 15.96, y: 35.91877}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3953,7 +3953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 468df3b6ea7a65c4f8f0313ed491cbd7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: baecb725425cce34f9ee8354e62cec77, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4471,7 +4471,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7504a4be7fca47844b7761439ecd5bd9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8bfa69816d525af499746e66ab6fcbc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4508,8 +4508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852e8ebae01976429b83445a07528bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteDiam: {fileID: 21300000, guid: 7504a4be7fca47844b7761439ecd5bd9, type: 3}
-  spriteTendang: {fileID: 21300000, guid: 0f32ab4cf316b6a489840b1cff2b4d76, type: 3}
+  spriteDiam: {fileID: 21300000, guid: 8bfa69816d525af499746e66ab6fcbc1, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 3f45739a217b75740b4e8343a79bb669, type: 3}
   spriteRenderer: {fileID: 0}
   animasiMenendang: 0
   launchSpeed: 10
@@ -4531,7 +4531,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16.76, y: 35.904266}
+    oldSize: {x: 11.200001, y: 39.82222}
     newSize: {x: 15.97, y: 35.901825}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4672,7 +4672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9393d2a7c84a00a4c8d56ffa572cd631, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09d623ff56949724bb8383c452068dfe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

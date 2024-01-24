@@ -23,6 +23,6 @@ public class ControlAnimationP2 : MonoBehaviour
             // If at maximum, set the normalizedValue to 0.999 to stay in the last frame
             normalizedValue = 0.999f;
         }
-        animP2.Play("Lattolattokiri", -1, normalizedValue);
+        animP2.Play("Lattolattokirinew", -1, normalizedValue);
     }
 }

@@ -23,6 +23,6 @@ public class ControlAnimationP1 : MonoBehaviour
             // If at maximum, set the normalizedValue to 0.999 to stay in the last frame
             normalizedValue = 0.999f;
         }
-        animP1.Play("Lattolattokanan", -1, normalizedValue);
+        animP1.Play("Lattolattokanannew", -1, normalizedValue);
     }
 }
