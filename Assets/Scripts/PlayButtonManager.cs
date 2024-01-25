@@ -29,6 +29,7 @@ public class PlayButtonManager : MonoBehaviour
         playerTwoData.StartGamePreparation2();
 
         // Load the game scene.
-        SceneManager.LoadScene("LattoLattoScene", LoadSceneMode.Single);
+        //SceneManager.LoadScene("LattoLattoScene", LoadSceneMode.Single);
+        GameObject.Find("StageController").GetComponent<StageController>().FirstNextGameGo();
     }
 }

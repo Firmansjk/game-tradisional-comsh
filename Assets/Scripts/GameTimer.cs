@@ -58,8 +58,9 @@ public class GameTimer : MonoBehaviour
 
     public void ToNextLevel()
     {
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(nextSceneIndex);
+        //int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        //SceneManager.LoadScene(nextSceneIndex);
+        GameObject.Find("StageController").GetComponent<StageController>().NextGameGo();
     }
 
     public void AddingScoreToTemporalPrefs()
