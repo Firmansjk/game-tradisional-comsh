@@ -32,17 +32,29 @@ public class StageController : MonoBehaviour
     private void Start()
     {
         //otomatis cari toggle
-        // Automatically find toggles if they are present in the scene
-        toggleGame1 = GameObject.Find("Lattolatto toggle").GetComponent<Toggle>();
-        toggleGame2 = GameObject.Find("Takraw toggle").GetComponent<Toggle>();
-        toggleGame3 = GameObject.Find("Maraga toggle").GetComponent<Toggle>();
-        toggleGame4 = GameObject.Find("Buuhrawe toggle").GetComponent<Toggle>();
-        toggleGame5 = GameObject.Find("Mappadendang toggle").GetComponent<Toggle>();
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Active Scenes:");
 
+            foreach (string scene in activeScenes)
+            {
+                Debug.Log(scene);
+            }
+        }
+    }
+
+    public void FindToggleGameobject()
+    {
+        //otomatis cari toggle
+        toggleGame1 = GameObject.Find("Lattolatto toggle").GetComponent<Toggle>();
+        toggleGame2 = GameObject.Find("Takraw toggle").GetComponent<Toggle>();
+        toggleGame3 = GameObject.Find("Maraga toggle").GetComponent<Toggle>();
+        toggleGame4 = GameObject.Find("Buuh Rawe toggle").GetComponent<Toggle>();
+        toggleGame5 = GameObject.Find("Mappadendang toggle").GetComponent<Toggle>();
     }
 
     public void StartGameGo()
