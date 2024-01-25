@@ -995,7 +995,6 @@ GameObject:
   - component: {fileID: 457425936}
   - component: {fileID: 457425935}
   - component: {fileID: 457425934}
-  - component: {fileID: 457425933}
   - component: {fileID: 457425937}
   m_Layer: 5
   m_Name: Player2 Button
@@ -1023,18 +1022,6 @@ RectTransform:
   m_AnchoredPosition: {x: -700, y: -8}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &457425933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457425931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce1af8a4aba8d49a2b02fd65835226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &457425934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3086,7 +3073,6 @@ GameObject:
   - component: {fileID: 1572874649}
   - component: {fileID: 1572874648}
   - component: {fileID: 1572874647}
-  - component: {fileID: 1572874646}
   - component: {fileID: 1572874650}
   m_Layer: 5
   m_Name: Player1 Button
@@ -3114,18 +3100,6 @@ RectTransform:
   m_AnchoredPosition: {x: 700, y: -8}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1572874646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572874644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce1af8a4aba8d49a2b02fd65835226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1572874647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3348,7 +3322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199.99998, y: 69.99999}
+  m_AnchoredPosition: {x: 0, y: 69.99999}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1624008883
@@ -3364,14 +3338,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1f23704f12fd4414aac166827aed4889, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cee8adfd588e844eb5ea37028768e34, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

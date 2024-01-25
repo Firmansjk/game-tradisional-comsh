@@ -20,12 +20,6 @@ public class Player1Animation : MonoBehaviour
         currentFrame = Mathf.MoveTowards(currentFrame, targetFrame, Time.deltaTime * animationSpeed);
         float normalizedTime = currentFrame / animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
         animator.Play("MappadendangKanan", 0, normalizedTime);
-
-        // Check for button press to quickly jump to frame 1
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetAnimationToFrame(1f);
-        }
     }
 
     // Function to set the animation to a specific frame

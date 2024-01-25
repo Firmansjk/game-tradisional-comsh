@@ -26,7 +26,7 @@ public class GoalController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == goalP1)
+        if (collision.gameObject == goalP1)
         {
             scoreP2++;
             this.gameObject.transform.position = afterGoalP1;
@@ -34,7 +34,7 @@ public class GoalController : MonoBehaviour
             paddle1.transform.position = afterGoalPaddle1;
             paddle2.transform.position = afterGoalPaddle2;
         }
-        if (collision == goalP2)
+        if (collision.gameObject == goalP2)
         {
             scoreP1++;
             this.gameObject.transform.position = afterGoalP2;
@@ -43,25 +43,25 @@ public class GoalController : MonoBehaviour
             paddle2.transform.position = afterGoalPaddle2;
         }
         //batas
-        if (collision == batasAtas)
+        if (collision.gameObject == batasAtas)
         {
             this.gameObject.transform.position = afterGoalP2;
             paddle1.transform.position = afterGoalPaddle1;
             paddle2.transform.position = afterGoalPaddle2;
         }
-        if (collision == batasBawah)
+        if (collision.gameObject == batasBawah)
         {
             this.gameObject.transform.position = afterGoalP1;
             paddle1.transform.position = afterGoalPaddle1;
             paddle2.transform.position = afterGoalPaddle2;
         }
-        if (collision == batasKiri)
+        if (collision.gameObject == batasKiri)
         {
             this.gameObject.transform.position = afterGoalP2;
             paddle1.transform.position = afterGoalPaddle1;
             paddle2.transform.position = afterGoalPaddle2;
         }
-        if (collision == batasKanan)
+        if (collision.gameObject == batasKanan)
         {
             this.gameObject.transform.position = afterGoalP1;
             paddle1.transform.position = afterGoalPaddle1;
