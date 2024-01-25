@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MaragaScene.unity
     guid: 11af7dfd7f8857e429693cfa4e13109d
   - enabled: 1
+    path: Assets/Scenes/BuuhRaweScene.unity
+    guid: f56ff5aa38d5f874abd10a465f38b500
+  - enabled: 1
+    path: Assets/Scenes/MappadendangScene.unity
+    guid: 294124a82e1945944886722c7527ab68
+  - enabled: 1
     path: Assets/Scenes/AfterHighscoreScene.unity
     guid: 7a868ec06f28b9946b11306d3b5de460
   m_configObjects: {}
