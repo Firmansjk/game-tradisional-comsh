@@ -4,29 +4,17 @@ using UnityEngine;
 
 public class Player2Animation : MonoBehaviour
 {
-    private Animator animator;
-    private float currentFrame = 1f;
-    private float targetFrame = 6f;
-    private float animationSpeed = 1.0f;
+    private Animator animatorP2;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animatorP2 = GetComponent<Animator>();
+        animatorP2.speed = 1;
+        animatorP2.Play("MappadendangKiri", 0, 0);
     }
 
-    private void Update()
+    public void PlayingAnimation()
     {
-        // Smoothly update the animation frame
-        currentFrame = Mathf.MoveTowards(currentFrame, targetFrame, Time.deltaTime * animationSpeed);
-        float normalizedTime = currentFrame / animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
-        animator.Play("MappadendangKiri", 0, normalizedTime);
-    }
-
-    // Function to set the animation to a specific frame
-    public void SetAnimationToFrame(float frame)
-    {
-        currentFrame = frame;
-        float normalizedTime = currentFrame / animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
-        animator.Play("MappadendangKiri", 0, normalizedTime);
+        animatorP2.Play("MappadendangKiri", 0, 0);
     }
 }
