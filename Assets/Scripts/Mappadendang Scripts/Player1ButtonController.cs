@@ -13,13 +13,6 @@ public class Player1ButtonController : MonoBehaviour
     {
         scoreP1++;
         scoreTextP1.text = scoreP1.ToString();
-        if (player1AnimationScript != null)
-        {
-            player1AnimationScript.SetAnimationToFrame(1f);
-        }
-        else
-        {
-            Debug.LogError("Player1Animation script reference is not assigned!");
-        }
+        player1AnimationScript.PlayingAnimation();
     }
 }
