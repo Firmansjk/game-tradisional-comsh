@@ -32,67 +32,58 @@ public class P1CharController : MonoBehaviour
     {
         isMovingLeft = true;
     }
-
     public void StopMovingLeft()
     {
         isMovingLeft = false;
     }
-
     public void StartMovingRight()
     {
         isMovingRight = true;
     }
-
     public void StopMovingRight()
     {
         isMovingRight = false;
     }
-
     public void StartMovingUp()
     {
         isMovingUp = true;
     }
-
     public void StopMovingUp()
     {
         isMovingUp = false;
     }
-
     public void StartMovingDown()
     {
         isMovingDown = true;
     }
-
     public void StopMovingDown()
     {
         isMovingDown = false;
     }
-
     private void MoveLeft()
     {
         Vector3 newPosition = transform.position + new Vector3(-1, 0f, 0f) * speed * Time.deltaTime;
         // Apply the new position
         transform.position = newPosition;
     }
-
     private void MoveRight()
     {
         Vector3 newPosition = transform.position + new Vector3(1, 0f, 0f) * speed * Time.deltaTime;
         // Apply the new position
         transform.position = newPosition;
     }
-
     private void MoveUp()
     {
         Vector3 newPosition = transform.position + new Vector3(0f, 1, 0f) * speed * Time.deltaTime;
         // Apply the new position
         transform.position = newPosition;
     }
-
     private void MoveDown()
     {
         Vector3 newPosition = transform.position + new Vector3(0f, -1, 0f) * speed * Time.deltaTime;
         // Apply the new position
         transform.position = newPosition;
     }
+
+
 }

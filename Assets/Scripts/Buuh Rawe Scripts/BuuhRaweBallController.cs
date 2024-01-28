@@ -7,6 +7,8 @@ public class BuuhRaweBallController : MonoBehaviour
     public Vector2 speed;
     public float ballMagnitude;
     public bool canKick;
+    public GameObject kickZone1;
+    public GameObject kickZone2;
 
     private Rigidbody2D rb;
     private void Start()
@@ -16,22 +18,13 @@ public class BuuhRaweBallController : MonoBehaviour
         canKick = false;
     }
 
-    private void Update()
-    {
-
-    }
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-          
-    }
-
     public void speedUpBall()
     {
         if (canKick)
         {
             rb.velocity *= ballMagnitude;
-            Invoke("speedDownBall", 5f);
+            canKick = false;
+            Invoke("speedDownBall", 2f);
         }
     }
 
