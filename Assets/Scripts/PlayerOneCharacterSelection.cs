@@ -52,6 +52,8 @@ public class PlayerOneCharacterSelection : MonoBehaviour
 
     public void StartGamePreparation1()
     {
+        //Memperbaiki bug tanpa nama/tanpa avatar
+        UpdateCharacterSelection();
         // Save selected character data and avatar for Player One to PlayerPrefs.
         PlayerPrefs.SetString("PlayerOneSelectedCharacter", playerSelectedCharacter);
         PlayerPrefs.SetInt("PlayerOneScore", playerScore);

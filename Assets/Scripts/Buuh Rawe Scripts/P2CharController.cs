@@ -4,56 +4,94 @@ using UnityEngine;
 
 public class P2CharController : MonoBehaviour
 {
-    private int touchID = -1;
-    private Vector2 touchStartPosition;
-    private bool isBeingTouched;
+    public float speed = 5f; // Adjust the speed as needed
 
-    private Rigidbody2D rb;
+    private bool isMovingLeft = false;
+    private bool isMovingRight = false;
+    private bool isMovingUp = false;
+    private bool isMovingDown = false;
 
-    private void Start()
+    void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
+        // Move the paddle based on button input
+        if (isMovingLeft)
+            MoveLeft();
+
+        if (isMovingRight)
+            MoveRight();
+
+        if (isMovingUp)
+            MoveUp();
+
+        if (isMovingDown)
+            MoveDown();
     }
 
-    private void Update()
+    public void StartMovingLeft()
     {
-        foreach (Touch touch in Input.touches)
-        {
-            switch (touch.phase)
-            {
-                case TouchPhase.Began:
-                    if (IsTouchingObject(touch.position))
-                    {
-                        isBeingTouched = true;
-                        touchID = touch.fingerId;
-                        touchStartPosition = touch.position;
-                    }
-                    break;
-
-                case TouchPhase.Moved:
-                    if (isBeingTouched && touch.fingerId == touchID)
-                    {
-                        Vector2 touchDelta = touch.position - touchStartPosition;
-                        rb.AddForce(touchDelta * Time.deltaTime, ForceMode2D.Impulse);
-                        touchStartPosition = touch.position;
-                    }
-                    break;
-
-                case TouchPhase.Ended:
-                    if (isBeingTouched && touch.fingerId == touchID)
-                    {
-                        isBeingTouched = false;
-                        touchID = -1;
-                    }
-                    break;
-            }
-        }
+        isMovingLeft = true;
     }
 
-    bool IsTouchingObject(Vector2 touchPosition)
+    public void StopMovingLeft()
     {
-        Vector2 touchWorldPosition = Camera.main.ScreenToWorldPoint(touchPosition);
-        Collider2D collider = GetComponent<Collider2D>();
-        return collider.bounds.Contains(touchWorldPosition);
+        isMovingLeft = false;
+    }
+
+    public void StartMovingRight()
+    {
+        isMovingRight = true;
+    }
+
+    public void StopMovingRight()
+    {
+        isMovingRight = false;
+    }
+
+    public void StartMovingUp()
+    {
+        isMovingUp = true;
+    }
+
+    public void StopMovingUp()
+    {
+        isMovingUp = false;
+    }
+
+    public void StartMovingDown()
+    {
+        isMovingDown = true;
+    }
+
+    public void StopMovingDown()
+    {
+        isMovingDown = false;
+    }
+
+    private void MoveLeft()
+    {
+        Vector3 newPosition = transform.position + new Vector3(-1, 0f, 0f) * speed * Time.deltaTime;
+        // Apply the new position
+        transform.position = newPosition;
+    }
+
+    private void MoveRight()
+    {
+        Vector3 newPosition = transform.position + new Vector3(1, 0f, 0f) * speed * Time.deltaTime;
+        // Apply the new position
+        transform.position = newPosition;
+    }
+
+    private void MoveUp()
+    {
+        Vector3 newPosition = transform.position + new Vector3(0f, 1, 0f) * speed * Time.deltaTime;
+        // Apply the new position
+        transform.position = newPosition;
+    }
+
+    private void MoveDown()
+    {
+        Vector3 newPosition = transform.position + new Vector3(0f, -1, 0f) * speed * Time.deltaTime;
+        // Apply the new position
+        transform.position = newPosition;
     }
 }
