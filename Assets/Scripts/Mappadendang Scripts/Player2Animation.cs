@@ -10,11 +10,11 @@ public class Player2Animation : MonoBehaviour
     {
         animatorP2 = GetComponent<Animator>();
         animatorP2.speed = 1;
-        animatorP2.Play("MappadendangKiri", 0, 0);
+        animatorP2.Play("MappadendangKiri2New", 0, 0);
     }
 
     public void PlayingAnimation()
     {
-        animatorP2.Play("MappadendangKiri", 0, 0);
+        animatorP2.Play("MappadendangKiri2New", 0, 0);
     }
 }

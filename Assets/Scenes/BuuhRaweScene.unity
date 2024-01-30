@@ -792,6 +792,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  spriteDiam: {fileID: 21300000, guid: e359e7f3d052c3c4c91cfc9ab71d5316, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 5e09dd1cb25bdc64cb1d8c8793503244, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!50 &66520122
 Rigidbody2D:
   serializedVersion: 4
@@ -4247,6 +4250,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 66520121}
+        m_TargetAssemblyTypeName: P2CharController, Assembly-CSharp
+        m_MethodName: KickAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1135156148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4410,6 +4425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  spriteDiam: {fileID: 21300000, guid: 1c914d3312a01934190b40042839fd66, type: 3}
+  spriteTendang: {fileID: 21300000, guid: 32f613fe1601aa444881dadbcd909ecc, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!50 &1155938634
 Rigidbody2D:
   serializedVersion: 4
@@ -6176,6 +6194,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2077877346}
         m_TargetAssemblyTypeName: BuuhRaweBallController, Assembly-CSharp
         m_MethodName: speedUpBall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155938633}
+        m_TargetAssemblyTypeName: P1CharController, Assembly-CSharp
+        m_MethodName: KickAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

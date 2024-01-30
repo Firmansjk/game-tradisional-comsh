@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class P2CharController : MonoBehaviour
 {
-    public float speed = 5f; // Adjust the speed as needed
+    public float speed = 5f;
+
+    //penambahan sprite
+    public Sprite spriteDiam;
+    public Sprite spriteTendang;
+    public SpriteRenderer spriteRenderer;
 
     private bool isMovingLeft = false;
     private bool isMovingRight = false;
@@ -84,5 +89,15 @@ public class P2CharController : MonoBehaviour
         transform.position = newPosition;
     }
 
-
+    public void IdleAnimation()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        this.spriteRenderer.sprite = spriteDiam;
+    }
+    public void KickAnimation()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        this.spriteRenderer.sprite = spriteTendang;
+        Invoke("IdleAnimation", 0.5f);
+    }
 }

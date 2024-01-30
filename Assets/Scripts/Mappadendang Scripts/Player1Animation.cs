@@ -10,12 +10,11 @@ public class Player1Animation : MonoBehaviour
     {
         animatorP1 = GetComponent<Animator>();
         animatorP1.speed = 1;
-        animatorP1.Play("MappadendangKanan", 0, 0);
+        animatorP1.Play("MappadendangKanan2New", 0, 0);
     }
 
     public void PlayingAnimation()
     {
-        Debug.Log("harusnya animasinya jalan");
-        animatorP1.Play("MappadendangKanan", 0, 0);
+        animatorP1.Play("MappadendangKanan2New", 0, 0);
     }
 }
