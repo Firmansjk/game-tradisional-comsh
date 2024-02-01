@@ -42,30 +42,5 @@ public class GoalController : MonoBehaviour
             paddle1.transform.position = afterGoalPaddle1;
             paddle2.transform.position = afterGoalPaddle2;
         }
-        //batas
-        if (collision.gameObject == batasAtas)
-        {
-            this.gameObject.transform.position = afterGoalP2;
-            paddle1.transform.position = afterGoalPaddle1;
-            paddle2.transform.position = afterGoalPaddle2;
-        }
-        if (collision.gameObject == batasBawah)
-        {
-            this.gameObject.transform.position = afterGoalP1;
-            paddle1.transform.position = afterGoalPaddle1;
-            paddle2.transform.position = afterGoalPaddle2;
-        }
-        if (collision.gameObject == batasKiri)
-        {
-            this.gameObject.transform.position = afterGoalP2;
-            paddle1.transform.position = afterGoalPaddle1;
-            paddle2.transform.position = afterGoalPaddle2;
-        }
-        if (collision.gameObject == batasKanan)
-        {
-            this.gameObject.transform.position = afterGoalP1;
-            paddle1.transform.position = afterGoalPaddle1;
-            paddle2.transform.position = afterGoalPaddle2;
-        }
     }
 }
