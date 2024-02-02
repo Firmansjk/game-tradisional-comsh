@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player1BarController : MonoBehaviour
 {
     public Player1ButtonController player1ButtonControllerScript;
-    public float speed = 5f; // Adjust the speed as needed
+    public float speed = 5f; 
     public float maxRightPosition;
     public float maxLeftPosition;
     public GameObject targetP1;
@@ -19,24 +19,18 @@ public class Player1BarController : MonoBehaviour
     {
         if (movingRight)
         {
-            // Move towards the right
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-
-            // Check if the object reached x
             if (transform.position.x >= maxRightPosition)
             {
-                movingRight = false; // Change direction
+                movingRight = false; 
             }
         }
         else
         {
-            // Move towards the left
             transform.Translate(Vector3.left * speed * Time.deltaTime);
-
-            // Check if the object reached x=0
             if (transform.position.x <= maxLeftPosition)
             {
-                movingRight = true; // Change direction
+                movingRight = true;
             }
         }
 
@@ -45,7 +39,6 @@ public class Player1BarController : MonoBehaviour
 
     public void PointingScoreP1()
     {
-        //pointing
         if (canPoint)
         {
             player1ButtonControllerScript.AddScoreP1();
