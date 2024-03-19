@@ -18,6 +18,14 @@ public class Player1ButtonController : MonoBehaviour
         berasKanan.SetActive(true);
         Invoke("DeactivateVBeras", 0.6f);
     }
+    public void MinusScoreP1() //mengurangi score
+    {
+        scoreP1--;
+        scoreTextP1.text = scoreP1.ToString();
+        player1AnimationScript.PlayingAnimation();
+        berasKanan.SetActive(true);
+        Invoke("DeactivateVBeras", 0.6f);
+    }
 
     public void DeactivateVBeras()
     {

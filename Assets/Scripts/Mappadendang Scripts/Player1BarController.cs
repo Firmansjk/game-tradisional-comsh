@@ -43,6 +43,10 @@ public class Player1BarController : MonoBehaviour
         {
             player1ButtonControllerScript.AddScoreP1();
         }
+        if (!canPoint)
+        {
+            player1ButtonControllerScript.MinusScoreP1();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

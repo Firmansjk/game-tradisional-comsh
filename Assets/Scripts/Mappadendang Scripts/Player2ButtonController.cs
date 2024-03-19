@@ -17,6 +17,14 @@ public class Player2ButtonController : MonoBehaviour
         berasKiri.SetActive(true);
         Invoke("DeactivateVBeras", 0.6f);
     }
+    public void MinusScoreP2()
+    {
+        scoreP2--;
+        scoreTextP2.text = scoreP2.ToString();
+        player2AnimationScript.PlayingAnimation();
+        berasKiri.SetActive(true);
+        Invoke("DeactivateVBeras", 0.6f);
+    }
 
     public void DeactivateVBeras()
     {
